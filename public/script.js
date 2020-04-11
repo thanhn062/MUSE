@@ -12,10 +12,10 @@ $("#searchBtn").on("click", function () {
 });
 // Login & Registration
 $("#loginBtn").on("click", function () {
-  login();
+  loadWheel();
 });
 $("#registerBtn").on("click", function () {
-  login();
+  loadWheel();
 });
 $("#logo").on("click", function () {
   console.log("logo click");
