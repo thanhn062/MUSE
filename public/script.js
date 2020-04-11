@@ -17,7 +17,10 @@ $("#loginBtn").on("click", function () {
 $("#registerBtn").on("click", function () {
   loadWheel();
 });
-$("#logo").on("click", function () {
+$(".histBtn").on("click", function () {
+  console.log("logo click");
+});
+$(".pwBtn").on("click", function () {
   console.log("logo click");
 });
 // Notification X button
