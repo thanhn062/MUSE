@@ -14,7 +14,7 @@ html {
   width: 340px;
     margin: 50px auto;
 }
- 
+
 .login-form form {
   margin-bottom: 15px;
   background: #f7f7f7;
@@ -37,7 +37,7 @@ html {
 .formLink {
   color: white;
 }
-.btn {        
+.btn {
   font-size: 15px;
   font-weight: bold;
   margin-top: 15px;
@@ -80,4 +80,5 @@ strong {
   bottom: 0;
   width: 100%;
   padding: 0.5rem !important;
+  z-index: 99;
 }
