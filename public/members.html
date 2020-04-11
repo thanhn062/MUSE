@@ -2,34 +2,53 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-git.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+  <!-- NAV MENU -->
+  <nav class="navbar is-primary is-active" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu" id="navmenu">
+      <div class="navbar-start">
+        <a href="index.html" class="navbar-item">Home</a>
+        <a href="#" class="navbar-item">View History</a>
+      </div>
     </div>
-  </div>
-</nav>
+    <div class="navbar-end">
+      <a href="#" class="navbar-item">Change Password</a>
+      <a href="#" class="navbar-item">Logout</a>
+    </div>
+  </nav>
+
+  <!-- SONG HISTORY -->
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+      <div class="box">
+        <h2 class="title">Welcome {name}<span class="member-name"></span></h2>
+        <h2 class="subtitle">Today's Date is {date}<span class="member-name"></span></h2>
       </div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <a href="#">Muse® </a> Developed By: Aldo Vibanco, Somreth Peng, Thanh Ngo
+        </p>
+      </div>
+    </div>
+  </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
 </body>
 
 </html>
