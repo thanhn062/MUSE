@@ -27,7 +27,7 @@
   </nav>
 
   <!-- WELCOME -->
-  <div class="section">
+  <div class="section" id="memberPage">
     <div class="container">
       <div class="box">
         <h2 class="title">Welcome {name}<span class="member-name"></span></h2>
@@ -37,12 +37,39 @@
   </div>
 
   <!-- VIEW HISTORY -->
-  <div class="section">
+  <div class="section" id="searchHist">
     <div class="container">
-      <div class="box" id="searchHist">
+      <div class="box">
         <h2 class="title level-item">Search History</h2>
-        <div class="box histResults">Results
+        <div class="box searchResults">Results
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHANGE PASSWORD -->
+  <div class="section login-form">
+    <div class="level-item">
+      <div class="section">
+        <form class="signup formBdr">
+          <h2 class="level-item title"></h2>
+          <div class="form-group">
+            <label class="level-item" for="exampleInputPassword1">New Password</label>
+            <input type="password" class="form-control subtitle" id="password-input" placeholder="Password"
+              required="required">
+          </div>
+          <div class="form-group">
+            <label class="level-item" for="exampleInputPassword1">Verify Password</label>
+            <input type="password" class="form-control subtitle" id="password-input" placeholder="Password"
+              required="required">
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn button is-primary level-item is-medium is-rounded is-fullwidth">Save
+            Changes</button>
+        </form>
       </div>
     </div>
   </div>
