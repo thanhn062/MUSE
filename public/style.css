@@ -49,11 +49,13 @@ h2 {
 #songTitle,
 #media,
 #lyrics,
+#searchHist,
 .notification {
   display: none;
 }
 
-.results {
+.results,
+.searchHist {
   background-color: #55b8bb;
   margin-bottom: 5px;
   color: white;
