@@ -1,20 +1,27 @@
 // Declare response global for easy access
 var data;
 // Enter -> search
-$(document).on('keypress',function(e) {
-    if(e.which == 13) {
-      search();
-    }
+$(document).on('keypress', function (e) {
+  if (e.which == 13) {
+    search();
+  }
 });
 // Click -> search
 $("#searchBtn").on("click", function () {
-    search();
+  search();
 });
-$("#logo").on("click", function() {
-    console.log("logo click");
+// Login & Registration
+$("#loginBtn").on("click", function () {
+  loadWheel();
+});
+$("#registerBtn").on("click", function () {
+  loadWheel();
+});
+$("#logo").on("click", function () {
+  console.log("logo click");
 });
 // Notification X button
-$(".delete").on("click",function(){
+$(".delete").on("click", function () {
   $(".notification").hide();
 });
 // Shows song by ID
@@ -29,9 +36,9 @@ function displaySong(id) {
       // Scroll down to lyric
       var offset = $("#songTitle").offset();
       $("html, body").animate({
-          scrollTop: offset.top,
-          scrollLeft: offset.left
-      }, );
+        scrollTop: offset.top,
+        scrollLeft: offset.left
+      });
       // Set title
       $(".name").text(data[i].title);
       // Set artist
@@ -50,11 +57,11 @@ function displaySong(id) {
       // Load meida URL to buttons
       for (var i = 0; i < song.length; i++) {
         if (song[i].provider == "youtube")
-          $("#youtube").attr("href",song[i].url);
+          $("#youtube").attr("href", song[i].url);
         else if (song[i].provider == "spotify")
-          $("#spotify").attr("href",song[i].url);
+          $("#spotify").attr("href", song[i].url);
         else if (song[i].provider == "soundcloud")
-          $("#soundcloud").attr("href",song[i].url);
+          $("#soundcloud").attr("href", song[i].url);
       }
       break;
     }
@@ -81,7 +88,7 @@ function search() {
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function(respond) {
+  }).then(function (respond) {
     $("#results").show();
     console.log(respond);
     // Clear results
@@ -97,8 +104,8 @@ function search() {
     for (var i = 0; i < data.length; i++) {
       // Create new tile
       var newTile = $("<div>");
-      newTile.attr("class","box results");
-      newTile.attr("onclick","displaySong('" + data[i].song_id + "')");
+      newTile.attr("class", "box results");
+      newTile.attr("onclick", "displaySong('" + data[i].song_id + "')");
       //newTile.attr("name",data[i].song_id);
       //console.log(data[i]);
       // Append title onto the tile

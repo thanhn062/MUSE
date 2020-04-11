@@ -2,34 +2,91 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-git.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+  <!-- NAV MENU -->
+  <nav class="navbar is-primary is-active" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu" id="navmenu">
+      <div class="navbar-start">
+        <a href="index.html" class="navbar-item">Home</a>
+        <a href="#" class="navbar-item">View History</a>
+      </div>
     </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+    <div class="navbar-end">
+      <a href="#" class="navbar-item">Change Password</a>
+      <a href="index.html" class="navbar-item">Logout</a>
+    </div>
+  </nav>
+
+  <!-- WELCOME -->
+  <div class="section" id="memberPage">
+    <div class="container">
+      <div class="box">
+        <h2 class="title">Welcome {name}<span class="member-name"></span></h2>
+        <h2 class="subtitle">Today's Date is {date}<span class="member-name"></span></h2>
       </div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <!-- VIEW HISTORY -->
+  <div class="section" id="searchHist">
+    <div class="container">
+      <div class="box">
+        <h2 class="title level-item">Search History</h2>
+        <div class="box searchResults">Results
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- CHANGE PASSWORD -->
+  <div class="section login-form" id="pwChange">
+    <div class="level-item">
+      <div class="section">
+        <form class="signup formBdr">
+          <h2 class="level-item title"></h2>
+          <div class="form-group">
+            <label class="level-item" for="exampleInputPassword1">New Password</label>
+            <input type="password" class="form-control subtitle" id="password-input" placeholder="Password"
+              required="required">
+          </div>
+          <div class="form-group">
+            <label class="level-item" for="exampleInputPassword1">Verify Password</label>
+            <input type="password" class="form-control subtitle" id="password-input" placeholder="Password"
+              required="required">
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn button is-primary level-item is-medium is-rounded is-fullwidth">Save
+            Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <a href="#">Muse® </a> Developed By: Aldo Vibanco, Somreth Peng, Thanh Ngo
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
 </body>
 
 </html>
