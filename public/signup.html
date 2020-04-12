@@ -32,18 +32,32 @@
       <div class="section">
         <form class="signup formBdr">
           <h2 class="level-item title">Register</h2>
+          <!-- EMAIL -->
           <div class="form-group">
-            <label class="level-item" for="exampleInputEmail1">Email address</label>
+            <label class="level-item" > </label>
             <input type="email" class="form-control subtitle" id="email-input" placeholder="Email" required="required">
           </div>
+          <!-- PASSWORD -->
           <div class="form-group">
-            <label class="level-item" for="exampleInputPassword1">Password</label>
+            <label class="level-item"></label>
             <input type="password" class="form-control subtitle" id="password-input" placeholder="Password"
               required="required">
           </div>
+          <!-- ERROR -->
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <!-- FIRST NAME -->
+          <div class="form-group">
+            <label class="level-item"></label>
+            <input type="firstName" class="form-control subtitle" id="firstName-input" placeholder="First Name"
+              required="required">
+          </div>
+          <div class="form-group">
+            <label class="level-item"></label>
+            <input type="lastName" class="form-control subtitle" id="lastName-input" placeholder="Last Name"
+              required="required">
           </div>
           <button type="submit" class="btn button is-primary level-item is-medium is-rounded is-fullwidth"
             id="registerBtn">Sign
