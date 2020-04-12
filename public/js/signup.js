@@ -3,22 +3,28 @@ $(document).ready(function() {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+  var firstNameInput = $("input#firstname-input");
+  var lastNameInput = $("input#lastname-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+      firstName: lastNameInput.val().trim(),
+      lastName: firstNameInput.val().trim()
     };
 
-    if (!userData.email || !userData.password) {
+    if (!userData.email || !userData.password || userData.firstName || userData.lastName) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
     emailInput.val("");
     passwordInput.val("");
+    firstNameInput.val("");
+    lastNameINput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
@@ -26,7 +32,9 @@ $(document).ready(function() {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
-      password: password
+      password: password,
+      firstName: firstName,
+      lastName: lastName
     })
       .then(function(data) {
         window.location.replace("/members");
