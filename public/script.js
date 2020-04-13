@@ -17,9 +17,7 @@ $("#loginBtn").on("click", function () {
 $("#registerBtn").on("click", function () {
   loadWheel();
 });
-$("#logo").on("click", function () {
-  console.log("logo click");
-});
+
 // Notification X button
 $(".delete").on("click", function () {
   $(".notification").hide();
