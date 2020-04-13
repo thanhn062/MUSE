@@ -13,15 +13,14 @@ $(".histBtn").on("click", function () {
 $(".pwBtn").on("click", function () {
   pwLoad();
 });
-
+// Shows Pages
 function histLoad() {
   $("#memberPage").hide();
   $("#pwChange").hide();
   $("#searchHist").show();
-}
-
+};
 function pwLoad() {
   $("#memberPage").hide();
   $("#searchHist").hide();
   $("#pwChange").show();
-}
+};
