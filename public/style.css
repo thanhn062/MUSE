@@ -11,8 +11,8 @@ html {
 
 /* Form Stuff */
 .login-form {
-  width: 340px;
-    margin: 50px auto;
+  width: fit-content;
+  margin: 50px auto;
 }
 
 .login-form form {
@@ -30,9 +30,13 @@ html {
 .form-control, .btn {
   min-height: 38px;
   border-radius: 2px;
+  margin-bottom: 8px !important;
 }
 .formBdr {
   border-radius: 10px;
+}
+.regBord {
+  padding: 0rem;
 }
 .formLink {
   color: white;
@@ -90,6 +94,9 @@ h2 {
   background-size: cover;
 }
 
+.navbar {
+      box-shadow: 0 20px 20px -3px rgba(0, 0, 0, 0.2);
+}
 strong {
   text-align: center;
   color: white;
