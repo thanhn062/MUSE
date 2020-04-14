@@ -22,7 +22,8 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password,
       firstName: req.body.firstName,
-      lastName:req.body.lastName
+      lastName: req.body.lastName,
+      bio: req.body.bio
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -46,7 +47,7 @@ module.exports = function(app) {
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      console.log(res);
+      //console.log(res);
       res.json({
         email: req.user.email,
         id: req.user.id,
