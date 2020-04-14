@@ -96,6 +96,8 @@ function displaySong(id) {
 function search() {
   // Remove notification
   $(".notification").hide();
+  // Remove Top 10 container
+  $("#topSongs").hide();
   // Put loading gif to search bar while waiting to load
   $("#search-icon").html('<i class="fas fa-spinner fa-spin"></i>');
   var searchInput = $("#search-input").val();
