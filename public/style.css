@@ -42,12 +42,18 @@ html {
   font-weight: bold;
   margin-top: 15px;
 }
+h1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
 h2 {
   padding: 10px;
   margin-top: 15px;
 }
 
 /* Search Results */
+#top10,
 #results,
 #songTitle,
 #media,
@@ -69,7 +75,23 @@ h2 {
   background-color: cadetblue;
 }
 
+#top10 {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  height: 610px;
+  width: 800px;
+  box-shadow: black 5px 10px 10px 5px;
+  border-radius: 2px;
+  padding-left: 30px;
+  text-align: left;
+  color: white;
+  font-size: large;
+  background-image: url("matthieu-a-bXjqPckmLD8-unsplash.jpg");
+  background-size: cover;
+}
+
 strong {
+  text-align: center;
   color: white;
 }
 

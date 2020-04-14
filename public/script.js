@@ -1,3 +1,30 @@
+//Top Ten
+window.onload = function showTopTen() {
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "https://billboard-api2.p.rapidapi.com/hot-100?date=2020-04-11&range=1-10",
+	  "method": "GET",
+	  "headers": {
+		"x-rapidapi-host": "billboard-api2.p.rapidapi.com",
+		"x-rapidapi-key": "1c308cd868msh1115aad88f439abp100b8fjsn8497a2529b9e"
+	  }
+	}
+	$.ajax(settings).done(function (response) {
+	}).then(function(response) {
+	  var topTen = response.content;
+	  for (var i = 1; i <= 10; i++) {
+		console.log(topTen[i].title);
+		var p = $("<p>");
+		p.attr("class","top10results");
+		p.html(`<br>${topTen[i].rank + "." + "  "}${topTen[i].title + "  "}${"/  " + topTen[i].artist}`);
+    $("#top10").append(p);
+	  }
+	  $("#top10").show();
+	});
+  }
+
+
 // Declare response global for easy access
 var data;
 // Enter -> search
