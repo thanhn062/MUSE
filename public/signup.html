@@ -29,39 +29,56 @@
   <!-- REGISTER FORM -->
   <div class="section login-form">
     <div class="level-item">
-      <div class="section">
+      <div class="section regBord">
         <form class="signup formBdr">
           <h2 class="level-item title">Register</h2>
+          <div class="tile is-ancestor">
+            <!-- FIRST NAME -->
+            <div class="tile is-parent">
+              <div class="form-group">
+                <label class="level-left">First Name*</label>
+                <input type="firstName" class="form-control input is-primary subtitle" id="firstName-input"
+                  required="required">
+              </div>
+            </div>
+            <!-- LAST NAME -->
+            <div class="tile is-parent">
+              <div class="form-group">
+                <label class="level-left">Last Name*</label>
+                <input type="lastName" class="form-control input is-primary subtitle" id="lastName-input"
+                  required="required">
+              </div>
+            </div>
+          </div>
           <!-- EMAIL -->
-          <div class="form-group">
-            <label class="level-item" > </label>
-            <input type="email" class="form-control subtitle" id="email-input" placeholder="Email" required="required">
+          <div class="tile is-ancestor">
+            <div class="tile is-parent">
+              <div class="form-group">
+                <label class="level-left">Email*</label>
+                <input type="email" class="form-control input is-primary subtitle" id="email-input" required="required">
+              </div>
+            </div>
+            <!-- PASSWORD -->
+            <div class="tile is-parent">
+              <div class="form-group">
+                <label class="level-left">Password*</label>
+                <input type="password" class="form-control input is-primary subtitle" id="password-input"
+                  required="required">
+              </div>
+            </div>
           </div>
-          <!-- PASSWORD -->
-          <div class="form-group">
-            <label class="level-item"></label>
-            <input type="password" class="form-control subtitle" id="password-input" placeholder="Password"
-              required="required">
+          <!-- USER BIO -->
+          <div class="field">
+            <div class="control">
+              <label class="level-left">Biography:</label>
+              <textarea class="textarea is-primary" type="bio" id="bio-input" placeholder="Optional"></textarea>
+            </div>
           </div>
+
           <!-- ERROR -->
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <!-- FIRST NAME -->
-          <div class="form-group">
-
-            <label class="level-item">First Name</label>
-            <input type="firstName" class="form-control subtitle" id="firstName-input" placeholder="required"
-              required="required">
-
-            <label class="level-item">Last Name</label>
-            <input type="lastName" class="form-control subtitle" id="lastName-input" placeholder="required"
-              required="required">
-
-            <label class="level-item">Biography</label>
-            <input type="bio" class="form-control subtitle" id="bio-input" placeholder="optional">
-
           </div>
           <button type="submit" class="btn button is-primary level-item is-medium is-rounded is-fullwidth"
             id="registerBtn">Sign
