@@ -4,10 +4,11 @@
 An application that will help you find songs by searching an artist, song title or lyrics. Easily create a log in profile that will display your music feed. 
 
 # Table of Contents
-* 1. [User Story](#markdown-User-Story)
-* 2. [Usage](#markdown-Usage)
-* 3. [Contributors](#markdown-Contributors)
-* 4. [Muse](#markdown-Muse)
+1. [User Story](#User-Story)
+2. [Usage](#Usage)
+3. [Contributors](#Contributors)
+4. [Links](#Links)
+5. [Muse](#Logo)
 
 
 ## User Story
@@ -36,7 +37,11 @@ Muse application impelements Passport, Audi, Billboard100 API's. This applicatio
 * Somreth Peng - https://github.com/somreth916
 * Aldo Vibanco - https://github.com/alvivanco85
 
+## Links
+* Deployed Poject on Heroku - https://muse-project.herokuapp.com/index.html
+* Github Project Link - https://github.com/thanhn062/MUSE
 
+## Logo
 ![MuSe](./public/muselogo2.png)
 
 
