@@ -13,13 +13,33 @@ window.onload = function showTopTen() {
 	$.ajax(settings).done(function (response) {
 	}).then(function(response) {
 	  var topTen = response.content;
+		var table = $("<table>");
+		table.attr("class","table");
+		table.append("<tr style='font-weight: 500'><td>Rank</td><td>Name</td><td>Artist</td></tr>")
+
 	  for (var i = 1; i <= 10; i++) {
-		console.log(topTen[i].title);
-		var p = $("<p>");
-		p.attr("class","top10results");
-		p.html(`<br>${topTen[i].rank + "." + "  "}${topTen[i].title + "  "}${"/  " + topTen[i].artist}`);
-    $("#top10").append(p);
+			console.log(topTen[i].title);
+			// Make a row
+			var tr = $("<tr>")
+			var rank = $("<td>");
+			var title = $("<td>");
+			var artist = $("<td>");
+			rank.append(topTen[i].rank);
+			title.append(topTen[i].title)
+			artist.append(topTen[i].artist)
+			// Add data into row
+			tr.append(rank);
+			tr.append(title);
+			tr.append(artist);
+			// Add to table
+			table.append(tr);
+			/*
+			var span = $("<span>");
+			span.attr("class","top10results");
+			span.html(`<br>${topTen[i].rank} | ${topTen[i].title}/${topTen[i].artist}`);
+	    $("#top10").append(span);*/
 	  }
+		$("#top10").append(table);
 	  $("#top10").show();
 	});
   }
