@@ -35,6 +35,10 @@ html {
 .formBdr {
   border-radius: 10px;
 }
+.feedBdr {
+  margin-left: 50px;
+  margin-top: 10px;
+}
 .regBord {
   padding: 0rem;
 }
