@@ -1,7 +1,7 @@
 
 # Group-Project
 
-An application that will help you find songs by searching an artist, song title or lyrics.
+An application that will help you find songs by searching an artist, song title or lyrics. Easily create a log in profile that will display your music feed. 
 
 
 
@@ -20,5 +20,5 @@ WHEN a person types a search by song title, artist name or just a few words of t
 
 THEN the application will turn up results related to the search.
 ```
-![MuSe](muselogo2.png)
+![MuSe](./public/muselogo2.png)
 

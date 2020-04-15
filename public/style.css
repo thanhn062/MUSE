@@ -104,7 +104,7 @@ table { margin: auto; }
 .is-half {
   color: white;
   border-radius: 25px;
-  border: 2px solid #73AD21;
+  border: 2px solid rgb(33, 89, 173);
   background-color: white;
 
 }
