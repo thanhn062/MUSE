@@ -8,6 +8,7 @@ $(document).ready(function () {
   });
 });
 
+// Date
 var d = new Date();
 var day = d.getDate();
 var month = d.getMonth();
@@ -15,7 +16,7 @@ var year = d.getFullYear();
 
 console.log(d);
 
-$(".today-date").text(month + "/" + day + "/" + year);
+$(".today-date").text("(" + month + "/" + day + "/" + year + ")");
 
 // Nav Bar
 $(".histBtn").on("click", function () {
