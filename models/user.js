@@ -32,6 +32,10 @@ module.exports = function(sequelize, DataTypes) {
     favorite: {
       type: DataTypes.TEXT,
       allowNull: true
+    },
+    history: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
 
   }
