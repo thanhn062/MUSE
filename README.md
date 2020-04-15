@@ -1,5 +1,5 @@
 
-# Group-Project
+# Group-Project 2
 
 An application that will help you find songs by searching an artist, song title or lyrics. Easily create a log in profile that will display your music feed. 
 
