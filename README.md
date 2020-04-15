@@ -3,6 +3,11 @@
 
 An application that will help you find songs by searching an artist, song title or lyrics. Easily create a log in profile that will display your music feed. 
 
+# Table of Contents
+* 1. [User Story](#markdown-User-Story)
+* 2. [Usage](#markdown-Usage)
+* 3. [Contributors](#markdown-Contributors)
+* 4. [Muse](#markdown-Muse)
 
 
 ## User Story
@@ -20,5 +25,19 @@ WHEN a person types a search by song title, artist name or just a few words of t
 
 THEN the application will turn up results related to the search.
 ```
+
+## Usage
+
+Muse application impelements Passport, Audi, Billboard100 API's. This application also uses MySQL database, Node and Express server to make user accessibilty possible. 
+
+## Contributors
+
+* Thanh Ngo - https://github.com/thanhn062
+* Somreth Peng - https://github.com/somreth916
+* Aldo Vibanco - https://github.com/alvivanco85
+
+
 ![MuSe](./public/muselogo2.png)
+
+
 
