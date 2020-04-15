@@ -84,26 +84,6 @@ h2 {
   background-color: cadetblue;
 }
 
-#topSongs {
-  margin-left: 250px;
-}
-#top10 {
-  margin-top: 50px;
-  margin-bottom: 80px;
-  height: 610px;
-  width: 800px;
-  box-shadow: black 5px 10px 10px 5px;
-  border: solid 2px black;
-  border-radius: 10px;
-  padding-left: 30px;
-  text-align: left;
-  color: white;
-  font-size: large;
-  background-image: url("matthieu-a-bXjqPckmLD8-unsplash.jpg");
-  background-size: cover;
-}
-
-
 .navbar {
       box-shadow: 0 20px 20px -3px rgba(0, 0, 0, 0.2);
 }
@@ -111,7 +91,7 @@ strong {
   text-align: center;
   color: white;
 }
-
+table { margin: auto; }
 /* Footer */
 .footer {
   position: fixed;
@@ -119,4 +99,23 @@ strong {
   width: 100%;
   padding: 0.5rem !important;
   z-index: 99;
+}
+
+.is-half {
+  color: white;
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  background-color: white;
+
+}
+
+#top10 {
+  color: black;
+  font-size: 1.5em;
+}
+#top10 td {
+  padding: 10px;
+}
+#top10 tr {
+  padding: 5px;
 }
