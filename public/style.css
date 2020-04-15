@@ -95,7 +95,7 @@ h2 {
 }
 
 .navbar {
-      box-shadow: 0 20px 20px -3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 20px -3px rgba(0, 0, 0, 0.2);
 }
 strong {
   text-align: center;
@@ -109,6 +109,7 @@ table { margin: auto; }
   width: 100%;
   padding: 0.5rem !important;
   z-index: 99;
+  box-shadow: 0 20px 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .is-half {
