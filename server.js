@@ -11,7 +11,7 @@ var db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 var app = express();
-app.use(compression({ filter: shouldCompress }));
+app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -35,7 +35,7 @@ function shouldCompress (req, res) {
     // don't compress responses with this request header
     return false
   }
- 
+
   // fallback to standard filter function
   return compression.filter(req, res)
 }
