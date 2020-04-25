@@ -33,6 +33,20 @@ module.exports = function(app) {
       });
   });
 
+  app.put("/api/addHistory", function(req, res) {
+    db.User.update({
+      history: req.body.name,
+    },
+    {
+      where: {
+        id: req.body
+      }
+    }
+  ).then(function(history) {
+    res.json(history);
+  });
+});
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();

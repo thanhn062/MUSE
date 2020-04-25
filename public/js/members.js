@@ -4,6 +4,7 @@ $(document).ready(function () {
   $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.lastName + " " + data.firstName);
     $(".user-bio").text(data.bio);
+    $(".member-id").text(data.id);
     console.log(data);
   });
 });

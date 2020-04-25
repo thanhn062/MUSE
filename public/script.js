@@ -33,11 +33,6 @@ window.onload = function showTopTen() {
 			tr.append(artist);
 			// Add to table
 			table.append(tr);
-			/*
-			var span = $("<span>");
-			span.attr("class","top10results");
-			span.html(`<br>${topTen[i].rank} | ${topTen[i].title}/${topTen[i].artist}`);
-	    $("#top10").append(span);*/
 	  }
 		$("#top10").append(table);
 	  $("#top10").show();
@@ -131,6 +126,11 @@ function search() {
   // Get results from API
   var api_token = "aac442290d3b6228e5387dc8352ecb4e";
   var queryURL = "https://api.audd.io/findLyrics/?q=" + searchInput + "&api_token=" + api_token;
+ 	// Add search history into datatbase
+	$.post("/api/addHistory", {
+		id: $(".member-id").text(),
+		name: $("#search-input").val()
+	});
 
   $.ajax({
     url: queryURL,
